@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — TinyPractice | Practice Management for Therapists</title>
+    <meta name="description" content="Practical advice on running a lean private therapy practice. Practice management, invoicing, session notes, and going solo without the overhead.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tinypractice.app/blog/">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #4A6352; --sage-light: #6B8574; --sage-lighter: #E8EDE9;
+            --sage-dark: #3A5242; --warm-white: #FAFAF7; --cream: #F5F3EE;
+            --text-primary: #2C3830; --text-secondary: #5B6B60;
+            --text-light: #7A8F80; --white: #FFFFFF; --border: #D4DDD6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary); background: var(--warm-white);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav { padding: 1rem 2rem; border-bottom: 1px solid var(--border); background: rgba(250,250,247,0.95); backdrop-filter: blur(20px); }
+        .nav-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--sage-dark); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .logo-mark { width: 28px; height: 28px; background: linear-gradient(135deg, #4F6D5A, #3A5242); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark svg { width: 18px; height: 18px; }
+        .nav-back { font-size: 0.9rem; color: var(--text-secondary); text-decoration: none; font-weight: 500; }
+        .nav-back:hover { color: var(--sage-dark); }
+        .blog-header { max-width: 800px; margin: 0 auto; padding: 3rem 2rem 1.5rem; }
+        .blog-header h1 { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .blog-header p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; }
+        .posts { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .post-card { display: block; text-decoration: none; color: inherit; padding: 1.75rem 0; border-bottom: 1px solid var(--border); }
+        .post-card:first-child { border-top: 1px solid var(--border); }
+        .post-card:hover .post-title { color: var(--sage); }
+        .post-date { font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.4rem; }
+        .post-title { font-family: 'DM Serif Display', serif; font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.4rem; transition: color 0.2s ease; line-height: 1.3; }
+        .post-excerpt { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; }
+        footer { padding: 2rem; text-align: center; border-top: 1px solid var(--border); }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0.75rem; }
+        .footer-links a { font-size: 0.85rem; color: var(--text-light); text-decoration: none; }
+        .footer-links a:hover { color: var(--sage); }
+        .footer-copy { font-size: 0.8rem; color: var(--text-light); }
+        @media (max-width: 768px) {
+            .blog-header { padding: 2rem 1.25rem 1rem; }
+            .blog-header h1 { font-size: 1.5rem; }
+            .posts { padding: 0 1.25rem 3rem; }
+            .post-card { padding: 1.25rem 0; }
+            .post-title { font-size: 1.15rem; }
+            .post-excerpt { font-size: 0.88rem; }
+            nav { padding: 0.75rem 1rem; }
+            .logo { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="logo">
+            <span class="logo-mark"><svg viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="432" cy="512" r="175" stroke="#FAFAF7" stroke-width="38" opacity="0.85"/><circle cx="592" cy="512" r="175" stroke="#FAFAF7" stroke-width="38" opacity="0.85"/></svg></span>
+            TinyPractice
+        </a>
+        <a href="../" class="nav-back">&larr; Back to home</a>
+    </div>
+</nav>
+<header class="blog-header">
+    <h1>The TinyPractice Blog</h1>
+    <p>Practical advice on running a lean private therapy practice.</p>
+</header>
+<div class="posts">
+    <a href="how-much-should-therapists-spend-on-practice-management.html" class="post-card">
+        <div class="post-date">February 14, 2026</div>
+        <div class="post-title">How Much Should Therapists Actually Spend on Practice Management Software?</div>
+        <div class="post-excerpt">Most therapists spend $600&ndash;$1,200 a year on software they use 20% of. Here&rsquo;s a framework for figuring out what your practice actually needs &mdash; and what it should cost.</div>
+    </a>
+    <a href="therapist-session-notes-without-cloud.html" class="post-card">
+        <div class="post-date">January 28, 2026</div>
+        <div class="post-title">Why Your Therapy Session Notes Don&rsquo;t Need to Live in the Cloud</div>
+        <div class="post-excerpt">Cloud storage introduces risks most solo therapists don&rsquo;t need to take. There&rsquo;s a simpler way to keep session notes secure, accessible, and entirely under your control.</div>
+    </a>
+    <a href="private-pay-therapist-invoicing.html" class="post-card">
+        <div class="post-date">January 10, 2026</div>
+        <div class="post-title">A Simple Invoicing Workflow for Private-Pay Therapists</div>
+        <div class="post-excerpt">If you&rsquo;re not billing insurance, your invoicing shouldn&rsquo;t require insurance-grade software. Here&rsquo;s a clean workflow that takes 30 seconds per session.</div>
+    </a>
+    <a href="hipaa-compliant-therapist-app-iphone.html" class="post-card">
+        <div class="post-date">December 3, 2025</div>
+        <div class="post-title">What &ldquo;HIPAA Compliant&rdquo; Actually Means for a Therapist App on Your iPhone</div>
+        <div class="post-excerpt">Every app claims HIPAA compliance. Few explain what that means in practice &mdash; especially when your data never leaves your device.</div>
+    </a>
+    <a href="simplepractice-alternatives-solo-therapists.html" class="post-card">
+        <div class="post-date">November 8, 2025</div>
+        <div class="post-title">SimplePractice Alternatives for Solo Therapists Who Want Less, Not More</div>
+        <div class="post-excerpt">SimplePractice is built for growing clinics. If you&rsquo;re a solo private-pay therapist, you&rsquo;re paying for a platform designed for someone else&rsquo;s practice.</div>
+    </a>
+    <a href="do-solo-therapists-need-ehr.html" class="post-card">
+        <div class="post-date">October 15, 2025</div>
+        <div class="post-title">Do Solo Therapists Actually Need an EHR?</div>
+        <div class="post-excerpt">Electronic Health Records were designed for hospitals and multi-provider clinics. If you&rsquo;re running a solo private-pay practice, you might not need one at all.</div>
+    </a>
+</div>
+<footer>
+    <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="mailto:support@tinypractice.app">Contact</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 BrookFord LLC. All rights reserved.</p>
+</footer>
+</body>
+</html>
