@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,8 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://tinypractice.app/og-image.png">
+    <meta name="twitter:title" content="Simple Practice Management for Therapists — TinyPractice">
+    <meta name="twitter:description" content="Client tracking, session notes, scheduling, and invoicing for $9.99/month. Your data stays on your device.">
     <link rel="canonical" href="https://tinypractice.app">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <noscript>
@@ -112,6 +114,30 @@
                     "@type": "Answer",
                     "text": "No servers to maintain, no cloud infrastructure to pay for, and no venture capital to pay back. Your data stays on your phone, which means our costs are near zero — and we pass that on. TinyPractice costs $9.99 per month or $79.99 per year, compared to $49 to $99 per month for SimplePractice and $69 to $79 per month for TherapyNotes."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Does TinyPractice work without internet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Everything runs locally on your device. No internet connection is required for session notes, scheduling, invoicing, or any other feature. Your data is always available, even in buildings with poor cell signal."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I export my data?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Pro subscribers can export all data as CSV (for spreadsheets) or JSON (for full backup and restore). Your data is never locked in — you can take it with you anytime."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to create an account?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. There's no account, no email address, no login. Download the app and start using it immediately. Nothing is ever tied to your identity — we don't even know who you are."
+                }
             }
         ]
     }
@@ -131,7 +157,7 @@
             --cream: #F5F3EE;
             --text-primary: #2C3830;
             --text-secondary: #5B6B60;
-            --text-light: #7A8F80;
+            --text-light: #5B6B60;
             --white: #FFFFFF;
             --border: #D4DDD6;
         }
@@ -702,7 +728,7 @@
         .faq-item {
             margin-bottom: 1.5rem;
         }
-        .faq-item h4 {
+        .faq-item h3 {
             font-size: 1.05rem;
             font-weight: 600;
             color: var(--text-primary);
@@ -798,7 +824,7 @@
             }
             .hero-cta-group { align-items: center; gap: 0.4rem; }
             .cta-primary { padding: 0.75rem 1.5rem; font-size: 0.92rem; }
-            .cta-note { display: none; }
+            .cta-note { font-size: 12px; }
             .phone-mockup { width: 200px; }
             .phone-mockup-lg { width: 220px; }
             .phone-mockup-lg img, .phone-mockup-lg video { border-radius: 28px; border-width: 6px; }
@@ -845,7 +871,7 @@
             .not-for-you p { font-size: 0.88rem; }
             .faq { padding: 2.5rem 1.25rem; }
             .faq h2 { font-size: 1.35rem; margin-bottom: 1.75rem; }
-            .faq-item h4 { font-size: 0.95rem; }
+            .faq-item h3 { font-size: 0.95rem; }
             .faq-item p { font-size: 0.88rem; }
             .faq-item { margin-bottom: 1.25rem; }
             .final-cta { padding: 3rem 1.25rem; }
@@ -999,10 +1025,32 @@
                 transform: none;
             }
         }
+
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          padding: 8px 16px;
+          background: #4A6352;
+          color: #fff;
+          z-index: 9999;
+          font-size: 14px;
+          text-decoration: none;
+          border-radius: 0 0 4px 0;
+          transition: top 0.2s;
+        }
+        .skip-link:focus {
+          top: 0;
+        }
+
+        *:focus-visible {
+          outline: 2px solid #4A6352;
+          outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
-
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- Nav -->
 <nav id="nav" aria-label="Main navigation">
     <div class="nav-inner">
@@ -1015,31 +1063,31 @@
             <a href="#pricing" class="nav-link">Pricing</a>
             <a href="#faq" class="nav-link">FAQ</a>
             <a href="https://apps.apple.com/app/TinyPractice/id6758564968" class="nav-cta" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-            Download for iOS
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            Download Free — iPhone
         </a>
         </div>
     </div>
 </nav>
 
-<main>
+<main id="main-content">
 
 <!-- Hero -->
 <section class="hero" id="overview">
     <div class="hero-text">
-        <div class="hero-badge">Built for therapists in private practice</div>
+        <div class="hero-badge">iPhone app for solo therapists</div>
         <h1>Your practice doesn't need a <em>$50/month EHR.</em></h1>
         <p class="hero-sub">TinyPractice does what you actually use — client tracking, session notes, scheduling, and invoicing — for $9.99/month. All data stays on your device.</p>
         <div class="hero-cta-group">
             <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="cta-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" style="width:18px;height:18px;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-                Download on the App Store
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" style="width:18px;height:18px;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+                Download Free on the App Store
             </a>
             <span class="cta-note">Free for up to 3 clients · iPhone only · No account required</span>
         </div>
     </div>
     <div class="phone-mockup phone-mockup-lg">
-        <video autoplay muted loop playsinline poster="dashboard.png" width="460" height="998" alt="TinyPractice therapist practice management app showing client list, dashboard, session notes, calendar, and invoicing">
+        <video autoplay muted loop playsinline poster="dashboard.png" width="460" height="998" aria-label="TinyPractice therapist practice management app showing client list, dashboard, session notes, calendar, and invoicing">
             <source src="tinypractice_hero.mp4" type="video/mp4">
             <img src="clients.png" alt="TinyPractice therapist practice management app showing client list" width="723" height="1568">
         </video>
@@ -1048,14 +1096,14 @@
 
 <!-- Value prop bar -->
 <div class="proof-bar reveal">
-    <p><strong>You became a therapist to help people, not to manage software.</strong> TinyPractice handles the business side so you can focus on the clinical side.</p>
+    <p>Solo therapists pay an average of $780/year for practice management software. With TinyPractice: $119.88/year.</p>
 </div>
 
 <!-- Problem -->
 <section class="problem" id="pricing-comparison">
     <div class="problem-inner reveal">
-        <h2>You don't need a full EHR. You need a simpler alternative.</h2>
-        <p>Most practice management platforms are built for large clinics — packed with telehealth, insurance billing, and client portals you don't use. You're paying for features designed for someone else's practice.</p>
+        <h2>You're paying clinic prices for a solo practice.</h2>
+        <p>SimplePractice and TherapyNotes are excellent products — for group practices billing insurance with integrated telehealth. If that's not you, you're subsidizing infrastructure you'll never touch.</p>
         <div class="compare-row">
             <div class="compare-card other reveal-scale stagger-1">
                 <div class="comp-name">SimplePractice</div>
@@ -1081,8 +1129,8 @@
 <!-- Features with screenshots -->
 <section class="features" id="features">
     <div class="features-header reveal">
-        <h2>Practice management tools for therapists who keep it simple.</h2>
-        <p>Three core features that run your daily practice.</p>
+        <h2>The four things your practice actually needs.</h2>
+        <p>Nothing else. Nothing you'll pay for and never open.</p>
     </div>
 
     <!-- Dashboard -->
@@ -1092,7 +1140,7 @@
         </div>
         <div class="feature-content reveal-right">
             <span class="feature-label">Revenue Dashboard</span>
-            <h3>Know where your practice stands.</h3>
+            <h3>Always know who owes you money.</h3>
             <p>See total revenue, outstanding balances, and overdue invoices at a glance. Track monthly earnings and upcoming appointments from one screen.</p>
             <ul class="feature-list">
                 <li>See exactly how much you earned this month</li>
@@ -1109,7 +1157,7 @@
         </div>
         <div class="feature-content reveal-left">
             <span class="feature-label">Client Management</span>
-            <h3>Everything about a client, in one place.</h3>
+            <h3>Every client. One screen. No tabs.</h3>
             <p>Session history, revenue, contact info, notes, scheduling, and invoicing — all on a single screen. No clicking through tabs or hunting for information.</p>
             <ul class="feature-list">
                 <li>Sessions, revenue, and outstanding balance at a glance</li>
@@ -1126,7 +1174,7 @@
         </div>
         <div class="feature-content reveal-right">
             <span class="feature-label">Invoicing</span>
-            <h3>Get paid without the hassle.</h3>
+            <h3>Send an invoice in 10 seconds.</h3>
             <p>Create invoices linked to actual sessions. Filter by pending, paid, and overdue. Email clients or mark invoices paid — all without leaving the list.</p>
             <ul class="feature-list">
                 <li>Filter by status to see what's outstanding</li>
@@ -1164,17 +1212,18 @@
 <section class="privacy" id="privacy">
     <div class="privacy-inner reveal">
         <div class="privacy-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <h2>Your data stays on your device.</h2>
-        <p>No cloud. No accounts. Your therapy data stays on your device — we never see it. Everything you enter into TinyPractice is stored locally on your phone. We can't access your client data, and we never will. Your clients' privacy is non-negotiable — so we built the app to make that the default.</p>
+        <h2>Your clients' data never leaves your phone.</h2>
+        <p>No cloud. No servers. No accounts. Everything you enter stays on your iPhone — encrypted at rest by iOS, protected by your passcode and Face ID. We have no servers to breach. We can't access your notes. We can't sell your data. We literally don't have it.</p>
+        <p>Your clients trust you with their most sensitive information. TinyPractice is built to honor that.</p>
     </div>
 </section>
 
 <!-- Pricing -->
 <section class="pricing" id="pricing">
     <div class="pricing-inner">
-        <h2 class="reveal">Simple, honest pricing.</h2>
+        <h2 class="reveal">Try it free. Keep it for $9.99/month.</h2>
         <p class="pricing-sub reveal">The free plan isn't a demo — it's the full app for up to 3 clients. Pro unlocks unlimited clients, data export, and backups.</p>
         <div class="pricing-cards">
             <div class="price-card reveal-scale stagger-1">
@@ -1182,13 +1231,13 @@
                 <div class="price-amount">$0</div>
                 <span class="price-period">Forever</span>
                 <ul class="price-features">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Up to 3 active clients</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Session notes &amp; tracking</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Scheduling &amp; calendar</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Invoicing &amp; email</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> PIN lock &amp; themes</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Up to 3 active clients</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Session notes &amp; tracking</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Scheduling &amp; calendar</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Invoicing &amp; email</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> PIN lock &amp; themes</li>
                 </ul>
-                <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="price-cta">Download Free</a>
+                <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="price-cta">Start Free — No Account Needed</a>
             </div>
             <div class="price-card featured reveal-scale stagger-2">
                 <div class="price-badge">Best value</div>
@@ -1196,12 +1245,12 @@
                 <div class="price-amount">$9.99</div>
                 <span class="price-period">per month · or $79.99/year (save 33%)</span>
                 <ul class="price-features">
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited clients</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> CSV data export</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full data backup &amp; restore</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Everything in Free</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Unlimited clients</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> CSV data export</li>
+                    <li><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Full data backup &amp; restore</li>
                 </ul>
-                <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="price-cta price-cta-featured">Start Free, Upgrade Anytime</a>
+                <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="price-cta price-cta-featured">Start Free, Upgrade In-App</a>
             </div>
         </div>
     </div>
@@ -1210,7 +1259,7 @@
 <!-- Transparency -->
 <aside class="not-for-you reveal">
     <h3>TinyPractice is not for every practice.</h3>
-    <p>If you need insurance billing, telehealth, a client portal, or multi-provider scheduling, you need a full EHR like SimplePractice or TherapyNotes. TinyPractice is built for private-pay solo practitioners who want simple client tracking, session notes, and invoicing — and nothing more.</p>
+    <p>If you need insurance billing, telehealth, a client portal, or multi-provider scheduling, TinyPractice isn't the right tool. SimplePractice and TherapyNotes are excellent for those use cases. We mean it — use them if you need them. TinyPractice is built for private-pay solo practitioners who want simple client tracking, session notes, and invoicing — and nothing more.</p>
 </aside>
 
 <!-- FAQ -->
@@ -1219,39 +1268,54 @@
         <h2 class="reveal">Frequently asked questions about TinyPractice</h2>
 
         <div class="faq-item reveal">
-            <h4>Is TinyPractice HIPAA compliant?</h4>
+            <h3>Is TinyPractice HIPAA compliant?</h3>
             <p>This is a nuanced question and we want to answer it honestly. TinyPractice stores all data locally on your device. Under HHS guidance, BrookFord LLC is not a HIPAA Business Associate because we never create, receive, maintain, or transmit Protected Health Information on anyone's behalf. Your data stays entirely on your phone — we never see it. However, if you are a therapist subject to HIPAA, compliance is ultimately your responsibility. That means securing your device, managing backups safely, and following your licensing board's requirements. TinyPractice is built to support your compliance by keeping data local and private — but no app, by itself, makes you HIPAA compliant.</p>
         </div>
 
         <div class="faq-item reveal">
-            <h4>What happens if I lose my phone?</h4>
+            <h3>What happens if I lose my phone?</h3>
             <p>Since data is stored locally, a lost phone means lost data unless you've created a backup. TinyPractice includes a JSON backup feature — we recommend backing up regularly and storing the file somewhere secure.</p>
         </div>
 
         <div class="faq-item reveal">
-            <h4>Is there an Android version?</h4>
+            <h3>Is there an Android version?</h3>
             <p>Not yet. TinyPractice is iPhone only for now. <a href="mailto:support@tinypractice.app?subject=Android%20interest" style="color:var(--sage);text-decoration:underline;">Drop us a note</a> if you want Android — it helps us prioritize what to build next.</p>
         </div>
 
         <div class="faq-item reveal">
-            <h4>Can I switch from SimplePractice or TherapyNotes to TinyPractice?</h4>
+            <h3>Can I switch from SimplePractice or TherapyNotes to TinyPractice?</h3>
             <p>There's no automatic import. You'd need to re-enter your active clients manually. For a solo practitioner with 5–20 clients, that's usually 15–30 minutes of setup.</p>
         </div>
 
         <div class="faq-item reveal">
-            <h4>Why is TinyPractice so much cheaper than SimplePractice or TherapyNotes?</h4>
+            <h3>Why is TinyPractice so much cheaper than SimplePractice or TherapyNotes?</h3>
             <p>No servers to maintain, no cloud infrastructure to pay for, and no venture capital to pay back. Your data stays on your phone, which means our costs are near zero — and we pass that on.</p>
+        </div>
+
+        <div class="faq-item reveal">
+            <h3>Does TinyPractice work without internet?</h3>
+            <p>Yes. Everything runs locally on your device. No internet connection is required for session notes, scheduling, invoicing, or any other feature. Your data is always available, even in buildings with poor cell signal.</p>
+        </div>
+
+        <div class="faq-item reveal">
+            <h3>Can I export my data?</h3>
+            <p>Yes. Pro subscribers can export all data as CSV (for spreadsheets) or JSON (for full backup and restore). Your data is never locked in — you can take it with you anytime.</p>
+        </div>
+
+        <div class="faq-item reveal">
+            <h3>Do I need to create an account?</h3>
+            <p>No. There's no account, no email address, no login. Download the app and start using it immediately. Nothing is ever tied to your identity — we don't even know who you are.</p>
         </div>
     </div>
 </section>
 
 <!-- Final CTA -->
 <section class="final-cta" id="download">
-    <h2 class="reveal">Stop paying for features you don't use.</h2>
-    <p class="reveal">Try TinyPractice free with up to 3 clients. No account, no cloud, no commitment.</p>
+    <h2 class="reveal">Try it free. 3 clients, full features, no account.</h2>
+    <p class="reveal">If TinyPractice saves you $40/month versus what you're paying now, it'll feel like getting paid to switch.</p>
     <a href="https://apps.apple.com/app/TinyPractice/id6758564968" target="_blank" rel="noopener noreferrer" class="cta-primary reveal-scale">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" style="width:18px;height:18px;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        Download on the App Store
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" style="width:18px;height:18px;"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5c0 26.2 4.8 53.3 14.4 81.2 12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+        Download Free on the App Store
     </a>
 </section>
 
